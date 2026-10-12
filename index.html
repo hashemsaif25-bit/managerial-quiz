@@ -149,7 +149,7 @@ document.addEventListener("keydown",e=>{
  if(e.key>="1"&&e.key<="4"&&i>=0&&i<qs.length&&!answered){pick(+e.key-1);return}
  if((e.key=="Enter"||e.key=="ArrowRight")&&!$("next").disabled&&e.target.tagName!="BUTTON"&&e.target.tagName!="TEXTAREA"){e.preventDefault();$("next").click()}
 });
-const ENDPOINT="PASTE_YOUR_WEB_APP_URL_HERE"; // Google Apps Script Web App URL
+const ENDPOINT="https://script.google.com/macros/s/AKfycbyli0QdP2FqCjXPEshrbWMVgbWnG3D374LrBTHX-ql3QKf9PlOVRaeWXdCrUVfzA45U/exec"; // Google Apps Script Web App URL
 const HAS_EP=/^https:\/\/script\.google\.com\//.test(ENDPOINT);
 let SID="",SNAME="",sentFor=null;
 function sendResult(payload){
