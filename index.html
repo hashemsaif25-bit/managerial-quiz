@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Managerial Accounting Quiz</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Caveat:wght@400;600;700&family=Courier+Prime:wght@400;700">
+<style>
+:root{--desk:#1d3a36;--deep:#142a27;--paper:#f4f8ec;--line:#d3e2c9;--ink:#1c2a4a;--mute:#5b6a63;--red:#b3261e;--note:#ffe27a;--gold:#d9a62e;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--desk:#0e1c1a;--deep:#08110f;--paper:#dfe7d6;--line:#c2d1b6}}
+:root[data-theme="dark"]{--desk:#0e1c1a;--deep:#08110f;--paper:#dfe7d6;--line:#c2d1b6}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--desk) repeating-linear-gradient(45deg,transparent 0 6px,rgba(255,255,255,.025) 6px 7px);color:var(--ink);font-family:"Caveat",cursive;font-size:22px}
+header{background:var(--deep);padding:14px clamp(16px,4vw,60px) 0;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;box-shadow:0 3px 0 rgba(0,0,0,.25)}
+.top{margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font:700 24px/1.1 "Bitter",Georgia,serif;color:#f4f8ec}
+.brand2{font:400 16px "Bitter",Georgia,serif;color:#9fc0b3;margin-top:3px}
+.props{display:flex;gap:2px;align-items:flex-end}
+.props svg{width:50px;height:50px}
+.props svg:nth-child(1){transform:rotate(-6deg)}.props svg:nth-child(3){transform:rotate(5deg)}.props svg:nth-child(4){transform:rotate(-4deg) translateY(2px)}
+.tabs{margin:10px 0 0;display:flex;gap:4px;align-items:flex-end}
+.tab{display:flex;align-items:center;gap:7px;font:700 15px "Bitter",Georgia,serif;padding:8px 14px 7px;border:0;border-radius:9px 9px 0 0;background:#2c4f49;color:#cfe3da;cursor:pointer}
+.tab svg{width:22px;height:22px}
+.tab[aria-selected="true"]{background:var(--paper);color:var(--ink)}
+.tab:focus-visible,.btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.meta{margin-left:auto;color:#9fc0b3;font:15px "Courier Prime",monospace;padding-bottom:8px}
+main{width:100%;padding:0 0 70px}
+.pad{--m:clamp(30px,6vw,90px);position:relative;background:var(--paper) repeating-linear-gradient(to bottom,transparent 0 33px,var(--line) 33px 34px);padding:24px clamp(18px,5vw,90px) 30px calc(var(--m) + 20px);min-height:calc(100vh - 150px);box-shadow:0 8px 0 rgba(0,0,0,.25)}
+.pad::before{content:"";position:absolute;top:0;bottom:0;left:var(--m);width:5px;border-left:1px solid #d96a62;border-right:1px solid #d96a62}
+h1{font:700 26px/1.2 "Bitter",Georgia,serif;margin:0 0 4px}
+.sub{font:400 16px "Bitter",Georgia,serif;color:var(--mute);margin:0 0 12px}
+.intro{font:400 15px/1.5 "Bitter",Georgia,serif;color:var(--mute);margin:0 0 22px;padding:8px 0;border-top:1px solid var(--mute);border-bottom:1px solid var(--mute)}
+.item{padding:12px 0 14px;border-bottom:2px solid #9cb894;overflow-x:auto;opacity:.8}
+.item.cur{opacity:1;animation:ink .45s ease-out}
+@keyframes ink{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@media(prefers-reduced-motion:reduce){.item.cur{animation:none}}
+.q{position:relative;background:var(--note);color:#3a2f06;font:600 21px/1.25 "Caveat",cursive;padding:14px 16px 12px;margin:2px 0 12px;transform:rotate(-.6deg);box-shadow:2px 3px 0 rgba(0,0,0,.18);max-width:94%}
+.q::before{content:"";position:absolute;top:-6px;left:14px;width:12px;height:12px;border-radius:50%;background:var(--red);box-shadow:inset -2px -2px 0 rgba(0,0,0,.25)}
+table{width:100%;border-collapse:collapse}
+td{padding:2px 6px;vertical-align:baseline}
+td.d{width:62px;font:600 21px "Caveat",cursive;white-space:nowrap}
+.cur td.d{background:linear-gradient(transparent 55%,rgba(246,224,94,.8) 55%)}
+td.a{font:600 23px "Caveat",cursive}
+tr.cr td.a{padding-left:36px;color:var(--ink)}
+td.ref{width:40px;text-align:center;font:15px "Courier Prime",monospace;color:var(--mute)}
+td.n{text-align:right;width:96px;white-space:nowrap;font:700 18px "Courier Prime",monospace;border-left:3px double #d96a62}
+td.n:last-child{border-right:3px double #d96a62}
+.memo td{font:400 19px "Caveat",cursive;color:var(--mute);padding-left:42px;border:0}
+.t{display:grid;grid-template-columns:1fr 1fr;position:relative}
+.t h3{grid-column:1/-1;margin:0 0 4px;font:700 17px "Bitter",Georgia,serif;display:flex;justify-content:space-between;border-bottom:2px solid var(--ink)}
+.t .side{padding:6px 8px;min-height:44px}.t .side+.side{border-left:2px solid var(--ink)}
+.t .row{display:flex;justify-content:space-between;gap:8px;font:600 20px "Caveat",cursive}
+.t .row span:last-child{font:700 17px "Courier Prime",monospace}
+.bal{grid-column:1/-1;border-top:2px solid var(--ink);padding:6px 8px;text-align:right;font:700 17px "Courier Prime",monospace}
+.t::after,.stamp{content:"POSTED";position:absolute;right:24%;top:30px;color:var(--red);border:3px solid var(--red);border-radius:6px;padding:0 8px;font:700 22px "Bitter",Georgia,serif;transform:rotate(-12deg);opacity:.7;pointer-events:none}
+.tbw{position:relative}.stamp{top:-6px;right:10px}
+.tb td{font:600 21px "Caveat",cursive}.tb td.n{width:110px;font:700 18px "Courier Prime",monospace}.tb td:first-child{font:15px "Courier Prime",monospace;width:48px}
+.tb tr.tot td{border-top:2px solid var(--ink);border-bottom:4px double var(--ink);font-weight:700}
+.empty{text-align:center;padding:30px 0 10px;font:600 24px "Caveat",cursive;color:var(--mute)}.empty svg{width:110px;height:110px;display:block;margin:0 auto 6px}
+.dock{position:fixed;left:0;right:0;bottom:0;background:var(--deep);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;justify-content:center;align-items:center}
+.btn{font:700 16px "Bitter",Georgia,serif;padding:10px 22px;border-radius:5px;border:2px solid #9fc0b3;background:transparent;color:#e3efe8;cursor:pointer}
+.btn.p{background:var(--gold);border-color:var(--gold);color:#2b2005}
+.btn:disabled{opacity:.4;cursor:default}
+.hint{color:#9fc0b3;font:14px "Bitter",Georgia,serif}
+.done{font:600 20px "Caveat",cursive;text-align:center;color:var(--mute);margin:10px 0 0}
+@media(min-width:1000px){h1{font-size:34px}.sub{font-size:18px}.intro{font-size:17px}.q{font-size:25px;max-width:80%}td.a{font-size:28px}td.d{font-size:25px;width:80px}td.n{font-size:21px;width:140px}.memo td{font-size:23px}.t .row{font-size:24px}.t .row span:last-child{font-size:19px}.tb td{font-size:25px}.tb td.n{width:150px}.brand{font-size:28px}.props svg{width:60px;height:60px}}
+@media(max-width:560px){.pad{--m:24px}td.n{width:70px;font-size:16px}td.d{width:54px}.hint,.props svg:nth-child(n+3){display:none}.t{grid-template-columns:1fr}.t .side+.side{border-left:0;border-top:2px solid var(--ink)}.t::after{right:12%}.tab{padding:8px 10px;font-size:14px}}
+
+.reg{max-width:420px;margin:6px auto 0;display:grid;gap:12px}.reg label{font:700 16px "Bitter",Georgia,serif;display:grid;gap:4px}.reg input{font:600 24px "Courier Prime",monospace;padding:8px 10px;border:2px solid var(--ink);border-radius:4px;background:rgba(255,255,255,.7);color:var(--ink)}.reg input:focus-visible{outline:3px solid var(--gold)}#err{color:var(--red);font:700 16px "Bitter",Georgia,serif;min-height:20px;margin:0}
+.code{margin-top:18px}.code textarea{width:100%;min-height:190px;font:600 15px/1.45 "Courier Prime",monospace;padding:10px;border:2px solid var(--ink);border-radius:4px;background:rgba(255,255,255,.7);color:var(--ink);resize:vertical}.code p{font:400 16px/1.45 "Bitter",Georgia,serif;margin:6px 0}.code .btn{border-color:var(--ink);color:var(--ink);margin-top:6px}
+.bar{height:8px;background:var(--line);border-radius:4px;margin:0 0 18px}.bar i{display:block;height:100%;width:0;background:#2f5d50;border-radius:4px;transition:width .3s}
+.tag{font:400 15px "Courier Prime",monospace;color:var(--mute);margin:0 0 8px}
+.qq{font:700 24px/1.3 "Bitter",Georgia,serif;margin:6px 0 10px}
+.opt{display:flex;gap:12px;align-items:baseline;width:100%;text-align:left;background:transparent;border:0;border-bottom:1px solid var(--mute);padding:10px 8px;font:600 24px/1.2 "Caveat",cursive;color:var(--ink);cursor:pointer}
+.opt b{font:700 15px "Courier Prime",monospace;border:2px solid var(--ink);border-radius:50%;width:28px;height:28px;display:inline-grid;place-items:center;flex:none}
+.opt:hover:not(:disabled){background:rgba(246,224,94,.4)}.opt:disabled{cursor:default}
+.opt.ok{background:#c5e6c5}.opt.no{background:#f3cfcc;text-decoration:line-through;text-decoration-color:var(--red)}
+.exp{font:400 17px/1.5 "Bitter",Georgia,serif;border-left:4px solid var(--red);padding:8px 12px;margin-top:14px;background:rgba(255,255,255,.45)}
+.res{position:relative;text-align:center;padding:10px 0}.res .big{font:700 64px "Bitter",Georgia,serif}.res .st{display:inline-block;color:var(--red);border:4px solid var(--red);border-radius:8px;padding:2px 14px;font:700 28px "Bitter",Georgia,serif;transform:rotate(-8deg);margin:6px 0 14px}
+.res p{font:400 18px "Bitter",Georgia,serif;margin:4px 0}
+.miss{text-align:left;margin-top:18px}.miss .item{opacity:1}.miss .qq{font-size:19px}.miss .ans{font:600 22px "Caveat",cursive;color:#1f6b3a}
+@media(min-width:1000px){.qq{font-size:28px}.opt{font-size:28px}.exp{font-size:19px}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="calc" viewBox="0 0 64 64"><rect x="10" y="4" width="44" height="56" rx="6" fill="#2f5d50"/><rect x="15" y="9" width="34" height="14" rx="2" fill="#cfe9d0"/><text x="46" y="20" font-size="11" text-anchor="end" font-family="Courier Prime,monospace" fill="#1c3b30">1,480</text><g fill="#e9efe6"><circle cx="20" cy="32" r="3.6"/><circle cx="32" cy="32" r="3.6"/><circle cx="44" cy="32" r="3.6"/><circle cx="20" cy="41" r="3.6"/><circle cx="32" cy="41" r="3.6"/><circle cx="44" cy="41" r="3.6"/><circle cx="20" cy="50" r="3.6"/><circle cx="32" cy="50" r="3.6"/></g><circle cx="44" cy="50" r="3.6" fill="#e0574f"/></symbol>
+<symbol id="coins" viewBox="0 0 64 64"><g fill="#d9a62e" stroke="#9a6f10" stroke-width="2"><rect x="6" y="46" width="32" height="8"/><ellipse cx="22" cy="54" rx="16" ry="5"/><rect x="6" y="38" width="32" height="8"/><ellipse cx="22" cy="46" rx="16" ry="5"/><rect x="6" y="30" width="32" height="8"/><ellipse cx="22" cy="30" rx="16" ry="5" fill="#f0c455"/><circle cx="47" cy="42" r="12" fill="#f0c455"/></g><text x="47" y="48" font-size="16" font-weight="700" text-anchor="middle" font-family="Bitter,serif" fill="#7a5508">$</text></symbol>
+<symbol id="book" viewBox="0 0 64 64"><rect x="8" y="8" width="48" height="48" rx="3" fill="#1d3557"/><rect x="8" y="8" width="9" height="48" fill="#a4262c"/><rect x="23" y="15" width="27" height="15" fill="#f4f8ec"/><path d="M27 21h19M27 26h12" stroke="#1d3557" stroke-width="2"/><rect x="14" y="52" width="42" height="4" fill="#f4f8ec"/></symbol>
+<symbol id="pencil" viewBox="0 0 64 64"><g transform="rotate(-40 32 32)"><rect x="26" y="4" width="12" height="42" fill="#f2c230"/><rect x="26" y="4" width="12" height="7" fill="#e58a8a"/><path d="M26 46h12l-6 14z" fill="#e8c9a0"/><path d="M29.5 55h5l-2.5 5z" fill="#333"/></g></symbol>
+</defs></svg>
+<header><div class="top"><div><div class="brand">Managerial Accounting Quiz</div><div class="brand2">Chapters 1 and 2: cost terms and decisions</div></div><div class="props" aria-hidden="true"><svg><use href="#calc"/></svg><svg><use href="#book"/></svg><svg><use href="#coins"/></svg><svg><use href="#pencil"/></svg></div></div><div style="height:12px"></div></header>
+<main><div class="pad"><div class="bar"><i id="bar"></i></div><div id="stage" aria-live="polite"></div></div></main>
+<div class="dock"><button class="btn p" id="next">Start</button><span class="hint">Answer with A-D or click; Enter = next</span></div>
+<script>
+const Q=(s,n,q,o,e)=>({s,n,q,o,e});
+const RAW=[
+Q("Ch1","","Which statement correctly distinguishes management accounting from financial accounting?",["Management accounting serves internal, future-oriented decisions and need not follow GAAP; financial accounting reports to outsiders under GAAP", "Management accounting must follow GAAP and be audited; financial accounting is prepared mainly for internal managers", "Management accounting reports past performance to investors; financial accounting forecasts the future for managers", "Both must follow GAAP and be audited; they differ only in how often reports are issued"],"Management accounting helps managers make decisions to meet organizational goals. It is future-oriented (for example, a budget) and is based on cost-benefit analysis rather than GAAP. Financial accounting reports past results to external users such as investors, banks and regulators, follows GAAP, and is certified by independent auditors."),
+Q("Ch1","","According to the chapter, which two broad strategies can a company follow?",["Cost leadership and product differentiation", "Market penetration and product development", "Vertical integration and diversification", "Mass production and mass marketing"],"Strategy specifies how an organization matches its own capabilities with opportunities in the marketplace. The chapter identifies two broad strategies: cost leadership and product differentiation. Strategic cost management is cost management that focuses specifically on these strategic issues."),
+Q("Ch1","","Which sequence correctly lists the business functions in the value chain?",["Research and development, design of products and processes, production, marketing, distribution, customer service", "Research and development, production, design of products and processes, marketing, distribution, customer service", "Design of products and processes, research and development, production, distribution, marketing, customer service", "Research and development, design of products and processes, marketing, production, distribution, customer service"],"The value chain is the sequence of business functions by which a product is made progressively more useful to customers. Administration supports all of them. Production and distribution together form the supply chain."),
+Q("Ch1","","Customers expect companies to keep improving their performance on several dimensions. Which of the following is NOT one of those key success factors listed in the chapter?",["Market share", "Quality", "Innovation", "Sustainability"],"The key success factors are cost and efficiency, quality, time, innovation, and sustainability. Market share is something a company may pursue, but it is not one of the performance dimensions customers expect."),
+Q("Ch1","Daily News raised its advertising rates by 4%. At the end of the period, advertising revenues were 7.2% lower than budgeted.","Comparing actual revenue with the budget and learning from the gap belongs to which step of the five-step decision-making process?",["Step 5: Implement the decision, evaluate performance, and learn", "Step 2: Obtain information", "Step 3: Make predictions about the future", "Step 4: Make decisions by choosing among alternatives"],"The five steps are: (1) identify the problem and uncertainties, (2) obtain information, (3) make predictions about the future, (4) make decisions by choosing among alternatives, (5) implement the decision, evaluate performance, and learn. Comparing actual results to the budget, then feeding that learning back into planning, is step 5."),
+Q("Ch1","","Which of the following is part of CONTROL rather than planning?",["Evaluating past performance and providing feedback to help future decisions", "Selecting the organization's goals and strategies", "Predicting results under alternative ways of achieving the goals", "Communicating the goals and how to achieve them to the whole organization"],"Planning means selecting goals and strategies, predicting results under alternatives, deciding how to attain the goals, and communicating them. Control means taking actions that implement the plan, evaluating past performance, and giving feedback and learning. The budget is the most important planning tool."),
+Q("Ch1","A manager compares the expected benefits of a new software system with its cost and approves it only if the benefits exceed the costs.","Which management accounting guideline is she applying?",["The cost-benefit approach", "Behavioral and technical considerations", "Different costs for different purposes", "The line and staff relationship"],"The three guidelines are the cost-benefit approach, behavioral and technical considerations, and calling for different costs for different purposes. Here she is weighing benefits against costs, which is the cost-benefit approach."),
+Q("Ch1","","Which list contains the four standards of ethical conduct for management accountants advanced by the IMA?",["Competence, confidentiality, integrity, credibility", "Competence, objectivity, independence, integrity", "Confidentiality, loyalty, integrity, transparency", "Credibility, due care, objectivity, professional behavior"],"The Institute of Management Accountants (IMA) advances four standards: competence, confidentiality, integrity, and credibility. The Sarbanes-Oxley Act (2002) is separate legislation that targets internal controls, corporate governance, monitoring of managers, and disclosure by public companies."),
+Q("Ch2","The cost object is the BMW X6 produced at the Spartanburg plant, where several car models are made.","Which of the following is a DIRECT cost of the X6?",["Tires used in assembling the X6", "Lease cost of the Spartanburg plant", "Plant administration expenses", "Property taxes on the plant"],"A direct cost can be conveniently and economically traced to the cost object, for example from a materials requisition document. Plant lease, administration, and property taxes serve all models, so they are indirect costs that must be allocated to the X6 in a rational and systematic way."),
+Q("Ch2","Steering wheels cost $600 per X6 assembled (variable). Supervision of the assembly line is a fixed $2,000,000 per year. Production rises from 20,000 to 40,000 X6s, within the relevant range.","What happens to the cost PER UNIT?",["Steering wheels stay at $600 per X6; supervision falls from $100 to $50 per X6", "Steering wheels rise to $1,200 per X6; supervision stays at $100 per X6", "Steering wheels fall to $300 per X6; supervision stays at $100 per X6", "Steering wheels stay at $600 per X6; supervision rises from $100 to $200 per X6"],"Variable cost per unit is constant ($600). Total variable cost doubles. Fixed cost per unit changes inversely with output: $2,000,000 / 20,000 = $100, then $2,000,000 / 40,000 = $50, because the same total is spread over more units."),
+Q("Ch2","Thomas Transport's fixed costs are $80,000 as long as it hauls between 120,000 and 240,000 miles. Next year it expects to haul 300,000 miles.","What should the manager conclude?",["The $80,000 can no longer be assumed, because 300,000 miles is outside the relevant range", "The $80,000 still holds, because fixed costs never change", "Fixed costs now become variable and rise in proportion to miles", "Fixed costs fall because more miles are being hauled"],"The relevant range is the band of normal activity in which a specific relationship between activity and cost holds. Fixed costs are fixed only within that range. Beyond it (as in Exhibit 2.4, where costs step up) the old figure cannot be relied on."),
+Q("Ch2","","Which of the following is a PERIOD cost for a manufacturing company?",["Marketing and customer-service costs", "Direct materials used in production", "Direct manufacturing labor", "Depreciation on the plant building"],"Period costs are all costs in the income statement other than cost of goods sold, expensed in the period incurred. They include R&D, design, marketing, distribution, and customer service. All manufacturing costs (direct materials, direct labor, manufacturing overhead) are inventoriable: they are assets until the product is sold, and only then become cost of goods sold."),
+Q("Ch2","Cellular Products reports (in thousands): direct materials used 76,000; direct manufacturing labor 9,000; manufacturing overhead 20,000.","What are the prime costs and the conversion costs?",["Prime costs 85,000; conversion costs 29,000", "Prime costs 29,000; conversion costs 85,000", "Prime costs 105,000; conversion costs 29,000", "Prime costs 85,000; conversion costs 96,000"],"Prime costs = direct materials + direct labor = 76,000 + 9,000 = 85,000. Conversion costs = direct labor + indirect manufacturing (overhead) = 9,000 + 20,000 = 29,000. Direct labor appears in both."),
+Q("Ch2","Cellular Products (in thousands): direct materials used 76,000; direct manufacturing labor 9,000; manufacturing overhead 20,000; beginning work-in-process 6,000; ending work-in-process 7,000.","What is the cost of goods manufactured?",["104,000", "105,000", "111,000", "118,000"],"Manufacturing costs incurred = 76,000 + 9,000 + 20,000 = 105,000. Add beginning WIP (6,000) to get 111,000 total costs to account for, then subtract ending WIP (7,000): cost of goods manufactured = 104,000. 105,000 forgets the WIP adjustment, and 111,000 forgets to subtract ending WIP."),
+Q("Ch2","","Companies compute product costs differently for different purposes. Which purpose uses the NARROWEST definition, counting only production (inventoriable) costs?",["Preparing external financial statements under GAAP", "Pricing and product-mix decisions", "Reimbursement under government cost-plus contracts", "Evaluating the profitability of a long-term strategy"],"For external financial statements, product cost includes only inventoriable (production) costs. Reimbursement under government contracts is broader (design costs, and sometimes R&D, are often allowed). Pricing and product-mix decisions use the broadest view, covering all costs in the value chain.")
+];
+const $=id=>document.getElementById(id),L="ABCD";
+const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+let qs,i,score,res,answered;
+function start(){qs=RAW.map(r=>({...r,opts:sh(r.o.map((t,k)=>({t,ok:k==0})))}));i=-1;score=0;res=[];next()}
+function next(){i++;answered=false;if(i>=qs.length)return finish();show()}
+function show(){
+ const q=qs[i];$("bar").style.width=(i/qs.length*100)+"%";
+ $("stage").innerHTML=`<p class="tag">${q.s=="Ch2"?"Chapter 2: Cost Terms":"Chapter 1: Management Accounting"} | Question ${i+1} of ${qs.length}</p>${q.n?`<div class="q">${q.n}</div>`:""}<div class="qq">${q.q}</div>`+q.opts.map((o,k)=>`<button class="opt" data-k="${k}"><b>${L[k]}</b><span>${o.t}</span></button>`).join("")+`<div id="fb"></div>`;
+ document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>pick(+b.dataset.k));
+ $("next").disabled=true;$("next").textContent=i==qs.length-1?"Finish":"Next question";
+}
+function pick(k){
+ if(answered)return;answered=true;const q=qs[i],ok=q.opts[k].ok;if(ok)score++;
+ res.push({q,ok,n:i+1,ch:q.opts[k].t});
+ document.querySelectorAll(".opt").forEach((b,n)=>{b.disabled=true;if(q.opts[n].ok)b.classList.add("ok");else if(n==k)b.classList.add("no")});
+ $("fb").innerHTML=`<div class="exp"><b>${ok?"Correct.":"Not correct."}</b> ${q.e}</div>`;
+ $("next").disabled=false;$("next").focus&&0;
+}
+function finish(){
+ $("bar").style.width="100%";const n=qs.length,p=Math.round(score/n*100);
+ const part=s=>{const r=res.filter(x=>x.q.s==s);return r.filter(x=>x.ok).length+" / "+r.length};
+ const miss=res.filter(x=>!x.ok).map(x=>`<div class="item"><div class="qq">${x.q.n?x.q.n+" ":""}${x.q.q}</div><div class="ans">Answer: ${x.q.opts.find(o=>o.ok).t}</div><div class="exp">${x.q.e}</div></div>`).join("");
+ $("stage").innerHTML=`<div class="res"><div class="big">${score} / ${n}</div><div class="st">${p>=80?"WELL DONE":p>=60?"PASS":"REVIEW"} ${p}%</div><p>Chapter 1: ${part("Ch1")} &nbsp;|&nbsp; Chapter 2: ${part("Ch2")}</p></div>${miss?`<div class="miss"><div class="qq">Questions to review</div>${miss}</div>`:`<p style="text-align:center;font:600 24px Caveat,cursive">No mistakes.</p>`}`;
+ const ck=res.length;
+ const lines=["UII Managerial Accounting Quiz","ID: "+SID+(SNAME?" | Name: "+SNAME:""),"Score: "+score+"/"+n+" ("+p+"%)","Ch1: "+part("Ch1")+" | Ch2: "+part("Ch2"),res.filter(x=>!x.ok).length?"Wrong answers:":"No wrong answers"].concat(res.filter(x=>!x.ok).map(x=>"Q"+x.n+" ["+x.q.s+"] chose: "+x.ch+" | correct: "+x.q.opts.find(o=>o.ok).t));
+ const box=document.createElement("div");box.className="code";
+ box.innerHTML='<div class="qq">Your result code</div><p id="snd"></p><p>'+(HAS_EP?'Backup copy of your result. Send it to your instructor if the automatic submission did not work.':'This page does not send your result to anyone. Copy this text and send it to your instructor.')+'</p><textarea id="rc" readonly></textarea><button class="btn" id="cp">Copy result code</button> <span id="cpm"></span>';
+ $("stage").insertBefore(box,$("stage").querySelector(".miss")||null);
+ $("rc").value=lines.join("\n");
+ sendResult({id:SID,name:SNAME,score:score,total:n,percent:p,ch1:part("Ch1"),ch2:part("Ch2"),wrong:res.filter(x=>!x.ok).map(x=>({q:x.n,chapter:x.q.s,chose:x.ch,correct:x.q.opts.find(o=>o.ok).t}))});
+ $("cp").onclick=()=>{const t=$("rc");t.select();let ok=false;try{ok=document.execCommand("copy")}catch(e){}
+  if(!ok&&navigator.clipboard){navigator.clipboard.writeText(t.value).then(()=>$("cpm").textContent="Copied.",()=>$("cpm").textContent="Select the text and copy it manually.");return}
+  $("cpm").textContent=ok?"Copied.":"Select the text and copy it manually."};
+ $("next").disabled=false;$("next").textContent="Try again";window.scrollTo({top:0});
+}
+$("next").onclick=()=>{if(i>=qs.length)start();else next()};
+document.addEventListener("keydown",e=>{
+ const k=L.indexOf(e.key.toUpperCase());
+ if(k>=0&&e.key.length==1&&i>=0&&i<qs.length&&!answered&&k<qs[i].opts.length){pick(k);return}
+ if(e.key>="1"&&e.key<="4"&&i>=0&&i<qs.length&&!answered){pick(+e.key-1);return}
+ if((e.key=="Enter"||e.key=="ArrowRight")&&!$("next").disabled&&e.target.tagName!="BUTTON"&&e.target.tagName!="TEXTAREA"){e.preventDefault();$("next").click()}
+});
+const ENDPOINT="PASTE_YOUR_WEB_APP_URL_HERE"; // Google Apps Script Web App URL
+const HAS_EP=/^https:\/\/script\.google\.com\//.test(ENDPOINT);
+let SID="",SNAME="",sentFor=null;
+function sendResult(payload){
+ const el=$("snd");if(!el)return;
+ if(!HAS_EP){el.textContent="";return}
+ el.textContent="Sending your result to your instructor...";
+ fetch(ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(payload)})
+  .then(()=>{el.textContent="Result submitted. If you are not sure it arrived, send the code below as well."},
+        ()=>{el.textContent="Could not send automatically. Copy the code below and send it to your instructor."});
+}
+i=-1;qs=[];$("stage").innerHTML='<div class="empty"><svg><use href="#book"/></svg>15 questions on Chapter 1 (the manager and management accounting) and Chapter 2 (cost terms and purposes).</div><div class="reg"><label>Student ID<input id="sid" inputmode="numeric" maxlength="15" autocomplete="off"></label><label>Name (optional)<input id="sname" maxlength="60" autocomplete="off"></label><p id="err"></p></div>';
+$("next").textContent="Start";
+function begin(){const v=$("sid").value.trim();if(!/^[0-9]{5,15}$/.test(v)){$("err").textContent="Enter your student ID (digits only).";$("sid").focus();return}
+ SID=v;SNAME=$("sname").value.trim();$("next").onclick=()=>{if(i>=qs.length)start();else next()};start()}
+$("next").onclick=begin;
+</script></body></html>
